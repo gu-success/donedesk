@@ -7,12 +7,16 @@
   <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?style=flat-square&logo=windows" alt="platform">
   <img src="https://img.shields.io/badge/Electron-desktop-47848F?style=flat-square&logo=electron&logoColor=white" alt="electron">
   <p><b>中文</b> | <a href="README.en.md">English</a></p>
-  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.1.2/DoneDesk-Setup-1.1.2.exe"><b>⬇️ 下载 Windows 安装包 (v1.1.2)</b></a></p>
+  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.1.3/DoneDesk-Setup-1.1.3.exe"><b>⬇️ 下载 Windows 安装包 (v1.1.3)</b></a></p>
   <img src="docs/images/hero.png" width="760" alt="DoneDesk 浅色、深色与半透明">
 </div>
 
 ## ✨ 功能特性
 
+- ✏️ **改密已修复**：解锁后或直接输入当前密码即可修改；需确认新密码，成功有明确提示。（v1.1.3）
+- 🔁 **底部「+」设周期**：点输入栏左侧 + 弹出周期选项（每天/每周/每月+时间），提交即创建周期任务；星标仍表示紧急。（v1.1.3）
+- ➕ **折叠输入栏**：空闲时收成右侧圆形 +，点击展开；点外部或 Esc 收回。（v1.1.3）
+- 🔤 **界面字体可选**：设置中切换系统默认 / Segoe UI / 微软雅黑 / 苹方 / Noto / Inter / 等宽。（v1.1.3）
 - 🕘 **历史记录** —— 按日期查看过去的任务（新→旧），已完成划线、未完成结转有标记；支持搜索、日期选择与前后翻页，可一键恢复到今天。（v1.1.2）
 - 🌐 **中英双语** —— 设置中一键切换中文 / English，默认跟随系统语言。（v1.1）
 - 🫧 **窗口不透明度** —— 30%–100% 实时调节，背景半透明、文字依然清晰。（v1.1）
@@ -41,6 +45,11 @@
 | <img src="docs/images/zh-light-settings.png" width="300"> | <img src="docs/images/en-dark-settings.png" width="300"> |
 | **不透明度 55%（浅色）** | **不透明度 55%（深色）** |
 | <img src="docs/images/zh-light-opacity55.png" width="300"> | <img src="docs/images/zh-dark-opacity55.png" width="300"> |
+| **折叠输入栏** | **周期弹出** |
+|:---:|:---:|
+| <img src="docs/images/en-light-add-collapsed.png" width="300"> | <img src="docs/images/en-light-recur-pop.png" width="300"> |
+| **周期已启用** | **修改密码成功** |
+| <img src="docs/images/en-light-recur-armed.png" width="300"> | <img src="docs/images/en-light-password-changed.png" width="300"> |
 | **历史记录（浅色）** | **历史记录（深色）** |
 | <img src="docs/images/en-light-history.png" width="300"> | <img src="docs/images/en-dark-history.png" width="300"> |
 | **拖拽排序中** | **English UI** |
@@ -52,7 +61,7 @@
 
 ## 📥 下载安装
 
-1. 前往 [Releases](https://github.com/gu-success/donedesk/releases/latest) 或直接下载 **[DoneDesk-Setup-1.1.2.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.2/DoneDesk-Setup-1.1.2.exe)**。
+1. 前往 [Releases](https://github.com/gu-success/donedesk/releases/latest) 或直接下载 **[DoneDesk-Setup-1.1.3.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.3/DoneDesk-Setup-1.1.3.exe)**。
 2. 双击运行安装程序。
 3. 系统要求：**Windows 10 / 11（64 位）**。
 
