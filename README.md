@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?style=flat-square&logo=windows" alt="platform">
   <img src="https://img.shields.io/badge/Electron-desktop-47848F?style=flat-square&logo=electron&logoColor=white" alt="electron">
   <p><b>中文</b> | <a href="README.en.md">English</a></p>
-  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.1.0/DoneDesk-Setup-1.1.0.exe"><b>⬇️ 下载 Windows 安装包 (v1.1.0)</b></a></p>
+  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.1.1/DoneDesk-Setup-1.1.1.exe"><b>⬇️ 下载 Windows 安装包 (v1.1.1)</b></a></p>
   <img src="docs/images/hero.png" width="760" alt="DoneDesk 浅色、深色与半透明">
 </div>
 
@@ -49,7 +49,7 @@
 
 ## 📥 下载安装
 
-1. 前往 [Releases](https://github.com/gu-success/donedesk/releases/latest) 或直接下载 **[DoneDesk-Setup-1.1.0.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.0/DoneDesk-Setup-1.1.0.exe)**。
+1. 前往 [Releases](https://github.com/gu-success/donedesk/releases/latest) 或直接下载 **[DoneDesk-Setup-1.1.1.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.1/DoneDesk-Setup-1.1.1.exe)**。
 2. 双击运行安装程序。
 3. 系统要求：**Windows 10 / 11（64 位）**。
 

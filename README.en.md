@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?style=flat-square&logo=windows" alt="platform">
   <img src="https://img.shields.io/badge/Electron-desktop-47848F?style=flat-square&logo=electron&logoColor=white" alt="electron">
   <p><a href="README.md">中文</a> | <b>English</b></p>
-  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.1.0/DoneDesk-Setup-1.1.0.exe"><b>⬇️ Download for Windows (v1.1.0)</b></a></p>
+  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.1.1/DoneDesk-Setup-1.1.1.exe"><b>⬇️ Download for Windows (v1.1.1)</b></a></p>
   <img src="docs/images/hero.png" width="760" alt="DoneDesk light and dark themes">
 </div>
 
@@ -51,7 +51,7 @@
 
 ## 📥 Download & Install
 
-1. Go to [Releases](https://github.com/gu-success/donedesk/releases/latest) or download **[DoneDesk-Setup-1.1.0.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.0/DoneDesk-Setup-1.1.0.exe)** directly.
+1. Go to [Releases](https://github.com/gu-success/donedesk/releases/latest) or download **[DoneDesk-Setup-1.1.1.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.1/DoneDesk-Setup-1.1.1.exe)** directly.
 2. Run the installer.
 3. Requirements: **Windows 10 / 11 (x64)**.
 
