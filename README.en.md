@@ -1,20 +1,26 @@
 <div align="center">
   <img src="docs/images/logo.png" width="96" alt="DoneDesk logo">
-  <h1>DoneDesk 事毕</h1>
+  <h1>DoneDesk</h1>
   <p><b>A lightweight sticky-note todo app for the Windows desktop.</b><br>轻巧的 Windows 桌面任务便签 —— 今日事，今日毕。</p>
   <a href="https://github.com/gu-success/donedesk/releases/latest"><img src="https://img.shields.io/github/v/release/gu-success/donedesk?style=flat-square&color=4f7cff" alt="release"></a>
   <a href="https://github.com/gu-success/donedesk/releases"><img src="https://img.shields.io/github/downloads/gu-success/donedesk/total?style=flat-square&color=2ea44f" alt="downloads"></a>
   <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?style=flat-square&logo=windows" alt="platform">
   <img src="https://img.shields.io/badge/Electron-desktop-47848F?style=flat-square&logo=electron&logoColor=white" alt="electron">
   <p><a href="README.md">中文</a> | <b>English</b></p>
-  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.0.0/DoneDesk-Setup-1.0.0.exe"><b>⬇️ Download for Windows (v1.0.0)</b></a></p>
+  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.1.0/DoneDesk-Setup-1.1.0.exe"><b>⬇️ Download for Windows (v1.1.0)</b></a></p>
   <img src="docs/images/hero.png" width="760" alt="DoneDesk light and dark themes">
 </div>
 
-> The app UI is in Chinese. 「事毕」 means "done / finished".
+> The app UI supports **English and Chinese** (switch in Settings; defaults to your system language).
 
 ## ✨ Features
 
+- 🌐 **English & Chinese UI** — switch in Settings; follows your system language by default. (v1.1)
+- 🫧 **Window opacity** — 30%–100%, applied live; the background turns translucent while text stays crisp. (v1.1)
+- 🟦 **Rounded window** — new rounded frameless look with a subtle border and shadow; resize from any edge. (v1.1)
+- ⚙️ **Settings button** — a gear next to the pin button opens the settings panel. (v1.1)
+- 🟡 **Floating ball + task bubble** — when minimized, a draggable ball shows your open-task count, and a chat-style bubble cycles through open tasks. Click to restore; right-click for Restore / Quit. (v1.1)
+- ↕️ **Redesigned drag & drop** — lifted card, dashed placeholder and smooth reflow animation. (v1.1)
 - 📋 **Today's tasks** — opens straight to today's list, with date and progress at the top.
 - ✅ **Strike-through on done** — completed tasks get crossed out.
 - 🔁 **Auto carry-over** — unfinished tasks automatically move to the next day.
@@ -29,19 +35,23 @@
 
 ## 📸 Screenshots
 
-| Tasks (light) | Tasks (dark) |
+| Tasks (light) | Tasks (dark, English) |
 |:---:|:---:|
-| <img src="docs/images/1-tasks.png" width="300"> | <img src="docs/images/6-dark-tasks.png" width="300"> |
-| **Notes list** | **Notes locked** |
-| <img src="docs/images/3b-notes-list.png" width="300"> | <img src="docs/images/2-notes-locked.png" width="300"> |
+| <img src="docs/images/en-light-tasks.png" width="300"> | <img src="docs/images/en-dark-tasks.png" width="300"> |
 | **Settings (light)** | **Settings (dark)** |
-| <img src="docs/images/4-settings.png" width="300"> | <img src="docs/images/4b-settings-dark.png" width="300"> |
-| **Set notes password** | **Locked (dark)** |
-| <img src="docs/images/5-notes-setup.png" width="300"> | <img src="docs/images/7-dark-notes-locked.png" width="300"> |
+| <img src="docs/images/en-light-settings.png" width="300"> | <img src="docs/images/en-dark-settings.png" width="300"> |
+| **55% opacity (light)** | **55% opacity (dark)** |
+| <img src="docs/images/zh-light-opacity55.png" width="300"> | <img src="docs/images/zh-dark-opacity55.png" width="300"> |
+| **Dragging a task** | **Chinese UI** |
+| <img src="docs/images/zh-light-dragging.png" width="300"> | <img src="docs/images/zh-light-tasks.png" width="300"> |
+
+**Floating ball & task bubble (when minimized)**
+
+<img src="docs/images/ball-bubble-light.png" width="370"> <img src="docs/images/ball-bubble-dark.png" width="370">
 
 ## 📥 Download & Install
 
-1. Go to [Releases](https://github.com/gu-success/donedesk/releases/latest) or download **[DoneDesk-Setup-1.0.0.exe](https://github.com/gu-success/donedesk/releases/download/v1.0.0/DoneDesk-Setup-1.0.0.exe)** directly.
+1. Go to [Releases](https://github.com/gu-success/donedesk/releases/latest) or download **[DoneDesk-Setup-1.1.0.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.0/DoneDesk-Setup-1.1.0.exe)** directly.
 2. Run the installer.
 3. Requirements: **Windows 10 / 11 (x64)**.
 

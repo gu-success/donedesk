@@ -1,18 +1,24 @@
 <div align="center">
   <img src="docs/images/logo.png" width="96" alt="DoneDesk logo">
-  <h1>事毕 DoneDesk</h1>
+  <h1>DoneDesk</h1>
   <p><b>轻巧的 Windows 桌面任务便签 —— 今日事，今日毕。</b><br>A lightweight sticky-note todo app for the Windows desktop.</p>
   <a href="https://github.com/gu-success/donedesk/releases/latest"><img src="https://img.shields.io/github/v/release/gu-success/donedesk?style=flat-square&color=4f7cff" alt="release"></a>
   <a href="https://github.com/gu-success/donedesk/releases"><img src="https://img.shields.io/github/downloads/gu-success/donedesk/total?style=flat-square&color=2ea44f" alt="downloads"></a>
   <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?style=flat-square&logo=windows" alt="platform">
   <img src="https://img.shields.io/badge/Electron-desktop-47848F?style=flat-square&logo=electron&logoColor=white" alt="electron">
   <p><b>中文</b> | <a href="README.en.md">English</a></p>
-  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.0.0/DoneDesk-Setup-1.0.0.exe"><b>⬇️ 下载 Windows 安装包 (v1.0.0)</b></a></p>
-  <img src="docs/images/hero.png" width="760" alt="事毕 浅色与深色主题">
+  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.1.0/DoneDesk-Setup-1.1.0.exe"><b>⬇️ 下载 Windows 安装包 (v1.1.0)</b></a></p>
+  <img src="docs/images/hero.png" width="760" alt="DoneDesk 浅色、深色与半透明">
 </div>
 
 ## ✨ 功能特性
 
+- 🌐 **中英双语** —— 设置中一键切换中文 / English，默认跟随系统语言。（v1.1）
+- 🫧 **窗口不透明度** —— 30%–100% 实时调节，背景半透明、文字依然清晰。（v1.1）
+- 🟦 **圆角窗口** —— 全新圆角无边框外观，带细边框与柔和阴影，边缘可拖动缩放。（v1.1）
+- ⚙️ **设置入口** —— 标题栏「置顶」旁的齿轮按钮，弹出设置面板。（v1.1）
+- 🟡 **悬浮球 + 任务气泡** —— 最小化后显示可拖动的悬浮球（显示未完成数量），旁边像聊天消息一样轮播未完成任务；单击恢复窗口，右键菜单可恢复 / 退出。（v1.1）
+- ↕️ **全新拖拽排序** —— 浮起卡片、虚线占位与平滑重排动画。（v1.1）
 - 📋 **今日任务** —— 打开即是今天要做的事，顶部显示日期与完成进度。
 - ✅ **完成即划线** —— 勾选后任务加删除线，一目了然。
 - 🔁 **未完成自动顺延** —— 今天没做完的任务会自动带到第二天，不会丢。
@@ -27,19 +33,23 @@
 
 ## 📸 截图
 
-| 今日任务（浅色） | 今日任务（深色） |
+| 今日任务（浅色） | 今日任务（深色 · English） |
 |:---:|:---:|
-| <img src="docs/images/1-tasks.png" width="300"> | <img src="docs/images/6-dark-tasks.png" width="300"> |
-| **记事本列表** | **记事本已锁定** |
-| <img src="docs/images/3b-notes-list.png" width="300"> | <img src="docs/images/2-notes-locked.png" width="300"> |
-| **设置（浅色）** | **设置（深色）** |
-| <img src="docs/images/4-settings.png" width="300"> | <img src="docs/images/4b-settings-dark.png" width="300"> |
-| **首次设置记事本密码** | **深色锁定界面** |
-| <img src="docs/images/5-notes-setup.png" width="300"> | <img src="docs/images/7-dark-notes-locked.png" width="300"> |
+| <img src="docs/images/zh-light-tasks.png" width="300"> | <img src="docs/images/en-dark-tasks.png" width="300"> |
+| **设置面板** | **Settings (English · Dark)** |
+| <img src="docs/images/zh-light-settings.png" width="300"> | <img src="docs/images/en-dark-settings.png" width="300"> |
+| **不透明度 55%（浅色）** | **不透明度 55%（深色）** |
+| <img src="docs/images/zh-light-opacity55.png" width="300"> | <img src="docs/images/zh-dark-opacity55.png" width="300"> |
+| **拖拽排序中** | **English UI** |
+| <img src="docs/images/zh-light-dragging.png" width="300"> | <img src="docs/images/en-light-tasks.png" width="300"> |
+
+**悬浮球与任务气泡（最小化时）**
+
+<img src="docs/images/ball-bubble-light.png" width="370"> <img src="docs/images/ball-bubble-dark.png" width="370">
 
 ## 📥 下载安装
 
-1. 前往 [Releases](https://github.com/gu-success/donedesk/releases/latest) 或直接下载 **[DoneDesk-Setup-1.0.0.exe](https://github.com/gu-success/donedesk/releases/download/v1.0.0/DoneDesk-Setup-1.0.0.exe)**。
+1. 前往 [Releases](https://github.com/gu-success/donedesk/releases/latest) 或直接下载 **[DoneDesk-Setup-1.1.0.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.0/DoneDesk-Setup-1.1.0.exe)**。
 2. 双击运行安装程序。
 3. 系统要求：**Windows 10 / 11（64 位）**。
 
