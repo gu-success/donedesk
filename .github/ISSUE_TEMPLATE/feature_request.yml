@@ -1,0 +1,12 @@
+name: ✨ 功能建议 Feature request
+description: 提出新想法 / Suggest an idea
+labels: [enhancement]
+body:
+  - type: textarea
+    attributes: {label: 需求场景 Problem, description: 你想解决什么问题？ What problem would this solve?}
+    validations: {required: true}
+  - type: textarea
+    attributes: {label: 建议方案 Proposed solution}
+    validations: {required: true}
+  - type: textarea
+    attributes: {label: 其他 Additional context}

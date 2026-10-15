@@ -1,0 +1,19 @@
+name: 🐛 问题反馈 Bug report
+description: 报告一个问题 / Report a bug
+labels: [bug]
+body:
+  - type: textarea
+    attributes: {label: 问题描述 Description, description: 发生了什么？ What happened?}
+    validations: {required: true}
+  - type: textarea
+    attributes: {label: 复现步骤 Steps to reproduce, placeholder: "1. ...\n2. ..."}
+    validations: {required: true}
+  - type: textarea
+    attributes: {label: 期望结果 Expected behavior}
+  - type: input
+    attributes: {label: 版本 Version, placeholder: "1.0.0"}
+    validations: {required: true}
+  - type: input
+    attributes: {label: 系统 OS, placeholder: "Windows 11 23H2"}
+  - type: textarea
+    attributes: {label: 截图 Screenshots, description: 请勿包含私人信息 / Please don't include private data}
