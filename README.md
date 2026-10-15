@@ -7,12 +7,13 @@
   <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?style=flat-square&logo=windows" alt="platform">
   <img src="https://img.shields.io/badge/Electron-desktop-47848F?style=flat-square&logo=electron&logoColor=white" alt="electron">
   <p><b>中文</b> | <a href="README.en.md">English</a></p>
-  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.1.1/DoneDesk-Setup-1.1.1.exe"><b>⬇️ 下载 Windows 安装包 (v1.1.1)</b></a></p>
+  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.1.2/DoneDesk-Setup-1.1.2.exe"><b>⬇️ 下载 Windows 安装包 (v1.1.2)</b></a></p>
   <img src="docs/images/hero.png" width="760" alt="DoneDesk 浅色、深色与半透明">
 </div>
 
 ## ✨ 功能特性
 
+- 🕘 **历史记录** —— 按日期查看过去的任务（新→旧），已完成划线、未完成结转有标记；支持搜索、日期选择与前后翻页，可一键恢复到今天。（v1.1.2）
 - 🌐 **中英双语** —— 设置中一键切换中文 / English，默认跟随系统语言。（v1.1）
 - 🫧 **窗口不透明度** —— 30%–100% 实时调节，背景半透明、文字依然清晰。（v1.1）
 - 🟦 **圆角窗口** —— 全新圆角无边框外观，带细边框与柔和阴影，边缘可拖动缩放。（v1.1）
@@ -40,6 +41,8 @@
 | <img src="docs/images/zh-light-settings.png" width="300"> | <img src="docs/images/en-dark-settings.png" width="300"> |
 | **不透明度 55%（浅色）** | **不透明度 55%（深色）** |
 | <img src="docs/images/zh-light-opacity55.png" width="300"> | <img src="docs/images/zh-dark-opacity55.png" width="300"> |
+| **历史记录（浅色）** | **历史记录（深色）** |
+| <img src="docs/images/en-light-history.png" width="300"> | <img src="docs/images/en-dark-history.png" width="300"> |
 | **拖拽排序中** | **English UI** |
 | <img src="docs/images/zh-light-dragging.png" width="300"> | <img src="docs/images/en-light-tasks.png" width="300"> |
 
@@ -49,7 +52,7 @@
 
 ## 📥 下载安装
 
-1. 前往 [Releases](https://github.com/gu-success/donedesk/releases/latest) 或直接下载 **[DoneDesk-Setup-1.1.1.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.1/DoneDesk-Setup-1.1.1.exe)**。
+1. 前往 [Releases](https://github.com/gu-success/donedesk/releases/latest) 或直接下载 **[DoneDesk-Setup-1.1.2.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.2/DoneDesk-Setup-1.1.2.exe)**。
 2. 双击运行安装程序。
 3. 系统要求：**Windows 10 / 11（64 位）**。
 

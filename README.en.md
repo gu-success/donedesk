@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?style=flat-square&logo=windows" alt="platform">
   <img src="https://img.shields.io/badge/Electron-desktop-47848F?style=flat-square&logo=electron&logoColor=white" alt="electron">
   <p><a href="README.md">中文</a> | <b>English</b></p>
-  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.1.1/DoneDesk-Setup-1.1.1.exe"><b>⬇️ Download for Windows (v1.1.1)</b></a></p>
+  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.1.2/DoneDesk-Setup-1.1.2.exe"><b>⬇️ Download for Windows (v1.1.2)</b></a></p>
   <img src="docs/images/hero.png" width="760" alt="DoneDesk light and dark themes">
 </div>
 
@@ -15,6 +15,7 @@
 
 ## ✨ Features
 
+- 🕘 **History** — browse past days (newest first): completed tasks struck through, unfinished / carried-over ones marked; search, date picker and prev/next day; restore any task to today. (v1.1.2)
 - 🌐 **English & Chinese UI** — switch in Settings; follows your system language by default. (v1.1)
 - 🫧 **Window opacity** — 30%–100%, applied live; the background turns translucent while text stays crisp. (v1.1)
 - 🟦 **Rounded window** — new rounded frameless look with a subtle border and shadow; resize from any edge. (v1.1)
@@ -42,6 +43,8 @@
 | <img src="docs/images/en-light-settings.png" width="300"> | <img src="docs/images/en-dark-settings.png" width="300"> |
 | **55% opacity (light)** | **55% opacity (dark)** |
 | <img src="docs/images/zh-light-opacity55.png" width="300"> | <img src="docs/images/zh-dark-opacity55.png" width="300"> |
+| **History (light)** | **History (dark)** |
+| <img src="docs/images/en-light-history.png" width="300"> | <img src="docs/images/en-dark-history.png" width="300"> |
 | **Dragging a task** | **Chinese UI** |
 | <img src="docs/images/zh-light-dragging.png" width="300"> | <img src="docs/images/zh-light-tasks.png" width="300"> |
 
@@ -51,7 +54,7 @@
 
 ## 📥 Download & Install
 
-1. Go to [Releases](https://github.com/gu-success/donedesk/releases/latest) or download **[DoneDesk-Setup-1.1.1.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.1/DoneDesk-Setup-1.1.1.exe)** directly.
+1. Go to [Releases](https://github.com/gu-success/donedesk/releases/latest) or download **[DoneDesk-Setup-1.1.2.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.2/DoneDesk-Setup-1.1.2.exe)** directly.
 2. Run the installer.
 3. Requirements: **Windows 10 / 11 (x64)**.
 
