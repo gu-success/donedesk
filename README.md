@@ -14,8 +14,8 @@
 ## ✨ 主要功能
 
 - 🔁 **未完成自动顺延** —— 今天没做完的任务自动带到明天，不会遗漏。
-- ✅ **完成划线 · 紧急星标** —— 勾选即划线；星标或末尾加 `*` 标记紧急并置顶。
-- 🗓️ **周期任务** —— 每天 / 每周 / 每月重复，可设定时提醒。
+- ✅ **完成划线 · 紧急星标** —— 勾选即划线；星标或末尾加 `*` 标记紧急并置顶；全部完成有庆祝动画。
+- 🗓️ **周期任务** —— 每天 / 每周 / 每月重复，可设定时提醒；独立「周期」页统一编辑、暂停。
 - 🟡 **悬浮球 + 任务气泡** —— 最小化后悬浮球显示未完成数量，气泡轮播待办。
 - 🔒 **加密记事本** —— 密码保护，AES-256-GCM 本地加密，闲置自动锁定。
 - 🕘 **历史记录** —— 按日期回顾过去的任务，支持搜索与一键恢复。
@@ -35,10 +35,10 @@
 
 | 平台 | 安装包 |
 |---|---|
-| Windows 10/11 (x64) | [DoneDesk-Setup-1.1.4.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-Setup-1.1.4.exe) |
-| macOS · Apple 芯片 (M1–M4) | [DoneDesk-1.1.4-mac-arm64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-1.1.4-mac-arm64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-1.1.4-mac-arm64.zip) |
-| macOS · Intel | [DoneDesk-1.1.4-mac-x64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-1.1.4-mac-x64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-1.1.4-mac-x64.zip) |
-| Linux · Debian/Ubuntu (x64) | [donedesk_1.1.4_amd64.deb](https://github.com/gu-success/donedesk/releases/download/v1.1.4/donedesk_1.1.4_amd64.deb) |
+| Windows 10/11 (x64) | [DoneDesk-Setup-1.1.5.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-Setup-1.1.5.exe) |
+| macOS · Apple 芯片 (M1–M4) | [DoneDesk-1.1.5-mac-arm64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-arm64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-arm64.zip) |
+| macOS · Intel | [DoneDesk-1.1.5-mac-x64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-x64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-x64.zip) |
+| Linux · Debian/Ubuntu (x64) | [donedesk_1.1.5_amd64.deb](https://github.com/gu-success/donedesk/releases/download/v1.1.5/donedesk_1.1.5_amd64.deb) |
 
 不确定 Mac 芯片？点左上角  →「关于本机」查看。
 

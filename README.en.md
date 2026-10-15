@@ -14,8 +14,8 @@
 ## ✨ Features
 
 - 🔁 **Auto carry-over** — unfinished tasks roll over to the next day automatically.
-- ✅ **Done & urgent** — check to strike through; star (or end with `*`) to mark urgent and pin to top.
-- 🗓️ **Recurring tasks** — daily / weekly / monthly, with optional time reminders.
+- ✅ **Done & urgent** — check to strike through; star (or end with `*`) to mark urgent; a little celebration when you finish the day.
+- 🗓️ **Recurring tasks** — daily / weekly / monthly with reminders, managed (edit / pause) in their own tab.
 - 🟡 **Floating ball + task bubble** — when minimized, a ball shows your open-task count and a bubble cycles through them.
 - 🔒 **Encrypted notes** — password-protected, AES-256-GCM, local-only, auto-lock on idle.
 - 🕘 **History** — browse past days, search, and restore any task to today.
@@ -35,10 +35,10 @@ Grab the package for your platform from [Releases](https://github.com/gu-success
 
 | Platform | Package |
 |---|---|
-| Windows 10/11 (x64) | [DoneDesk-Setup-1.1.4.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-Setup-1.1.4.exe) |
-| macOS · Apple Silicon (M1–M4) | [DoneDesk-1.1.4-mac-arm64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-1.1.4-mac-arm64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-1.1.4-mac-arm64.zip) |
-| macOS · Intel | [DoneDesk-1.1.4-mac-x64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-1.1.4-mac-x64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-1.1.4-mac-x64.zip) |
-| Linux · Debian/Ubuntu (x64) | [donedesk_1.1.4_amd64.deb](https://github.com/gu-success/donedesk/releases/download/v1.1.4/donedesk_1.1.4_amd64.deb) |
+| Windows 10/11 (x64) | [DoneDesk-Setup-1.1.5.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-Setup-1.1.5.exe) |
+| macOS · Apple Silicon (M1–M4) | [DoneDesk-1.1.5-mac-arm64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-arm64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-arm64.zip) |
+| macOS · Intel | [DoneDesk-1.1.5-mac-x64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-x64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-x64.zip) |
+| Linux · Debian/Ubuntu (x64) | [donedesk_1.1.5_amd64.deb](https://github.com/gu-success/donedesk/releases/download/v1.1.5/donedesk_1.1.5_amd64.deb) |
 
 Not sure which Mac you have? Apple menu  → About This Mac.
 
