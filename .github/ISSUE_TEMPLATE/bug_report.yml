@@ -14,6 +14,6 @@ body:
     attributes: {label: 版本 Version, placeholder: "1.0.0"}
     validations: {required: true}
   - type: input
-    attributes: {label: 系统 OS, placeholder: "Windows 11 23H2"}
+    attributes: {label: 系统 OS, placeholder: "Windows 11 23H2 / macOS 15 / Ubuntu 24.04"}
   - type: textarea
     attributes: {label: 截图 Screenshots, description: 请勿包含私人信息 / Please don't include private data}
