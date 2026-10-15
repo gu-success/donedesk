@@ -50,6 +50,8 @@
 | <img src="docs/images/en-light-add-collapsed.png" width="300"> | <img src="docs/images/en-light-recur-pop.png" width="300"> |
 | **周期已启用** | **修改密码成功** |
 | <img src="docs/images/en-light-recur-armed.png" width="300"> | <img src="docs/images/en-light-password-changed.png" width="300"> |
+| **字体：微软雅黑** | **字体设置** |
+| <img src="docs/images/en-light-font-yahei.png" width="300"> | <img src="docs/images/en-light-font-settings.png" width="300"> |
 | **历史记录（浅色）** | **历史记录（深色）** |
 | <img src="docs/images/en-light-history.png" width="300"> | <img src="docs/images/en-dark-history.png" width="300"> |
 | **拖拽排序中** | **English UI** |

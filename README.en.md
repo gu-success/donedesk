@@ -52,6 +52,8 @@
 | <img src="docs/images/en-light-add-collapsed.png" width="300"> | <img src="docs/images/en-light-recur-pop.png" width="300"> |
 | **Recurrence armed** | **Password changed** |
 | <img src="docs/images/en-light-recur-armed.png" width="300"> | <img src="docs/images/en-light-password-changed.png" width="300"> |
+| **Font: YaHei** | **Font settings** |
+| <img src="docs/images/en-light-font-yahei.png" width="300"> | <img src="docs/images/en-light-font-settings.png" width="300"> |
 | **History (light)** | **History (dark)** |
 | <img src="docs/images/en-light-history.png" width="300"> | <img src="docs/images/en-dark-history.png" width="300"> |
 | **Dragging a task** | **Chinese UI** |
