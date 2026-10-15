@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?style=flat-square&logo=windows" alt="platform">
   <img src="https://img.shields.io/badge/Electron-desktop-47848F?style=flat-square&logo=electron&logoColor=white" alt="electron">
   <p><b>中文</b> | <a href="README.en.md">English</a></p>
-  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.1.3/DoneDesk-Setup-1.1.3.exe"><b>⬇️ 下载 Windows 安装包 (v1.1.3)</b></a></p>
+  <p><a href="https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-Setup-1.1.4.exe"><b>⬇️ 下载 Windows 安装包 (v1.1.4)</b></a> · <a href="https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-1.1.4-mac-arm64.dmg"><b> macOS (Apple 芯片)</b></a> · <a href="https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-1.1.4-mac-x64.dmg"><b>macOS (Intel)</b></a></p>
   <img src="docs/images/hero.png" width="760" alt="DoneDesk 浅色、深色与半透明">
 </div>
 
@@ -63,12 +63,28 @@
 
 ## 📥 下载安装
 
-1. 前往 [Releases](https://github.com/gu-success/donedesk/releases/latest) 或直接下载 **[DoneDesk-Setup-1.1.3.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.3/DoneDesk-Setup-1.1.3.exe)**。
+1. 前往 [Releases](https://github.com/gu-success/donedesk/releases/latest) 或直接下载 **[DoneDesk-Setup-1.1.4.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-Setup-1.1.4.exe)**。
 2. 双击运行安装程序。
 3. 系统要求：**Windows 10 / 11（64 位）**。
 
 > [!NOTE]
 > 安装包暂未进行代码签名，首次运行时 Windows SmartScreen 可能提示“已保护你的电脑”。点击 **「更多信息」→「仍要运行」** 即可。
+
+###  macOS 下载
+
+| 芯片 | 安装包 |
+|---|---|
+| Apple 芯片（M1/M2/M3/M4） | [DoneDesk-1.1.4-mac-arm64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-1.1.4-mac-arm64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-1.1.4-mac-arm64.zip) |
+| Intel | [DoneDesk-1.1.4-mac-x64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-1.1.4-mac-x64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.4/DoneDesk-1.1.4-mac-x64.zip) |
+
+不确定？点左上角  →「关于本机」，“芯片”显示 Apple M 系列选 arm64，显示 Intel 选 x64。
+
+**首次打开未签名应用：** 本应用未经 Apple 公证，首次打开会提示“无法验证开发者”。任选一种：
+1. 在「应用程序」中**右键点击 DoneDesk → 打开**，再点「打开」；
+2. 或前往「系统设置 → 隐私与安全性」，在底部点 **「仍要打开」**；
+3. 或在终端执行：`xattr -cr /Applications/DoneDesk.app`
+
+macOS 快捷键：`⌘⇧L` 显示/隐藏，`⌘,` 设置，`⌘Q` 退出；关闭窗口后应用保留在菜单栏。
 
 ## ⌨️ 快捷键与小技巧
 
