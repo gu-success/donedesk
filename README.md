@@ -6,6 +6,7 @@
   <a href="https://github.com/gu-success/donedesk/releases"><img src="https://img.shields.io/github/downloads/gu-success/donedesk/total?style=flat-square&color=2ea44f" alt="downloads"></a>
   <img src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-555?style=flat-square" alt="platform">
   <img src="https://img.shields.io/badge/Electron-desktop-47848F?style=flat-square&logo=electron&logoColor=white" alt="electron">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="license MIT"></a>
   <p><b>中文</b> | <a href="README.en.md">English</a></p>
   <p><a href="https://github.com/gu-success/donedesk/releases/latest"><b>⬇️ 下载最新版</b></a></p>
   <img src="docs/images/hero.png" width="760" alt="DoneDesk 浅色、深色与半透明">
@@ -89,6 +90,23 @@ Windows 10/11（x64）、macOS（Apple 芯片与 Intel）以及 Linux（Debian/U
 - [ ] 自动更新
 - [ ] 安装包代码签名 / Apple 公证
 
+## 🛠️ 从源码构建
+
+需要 Node.js 20+。
+
+```bash
+npm ci              # 安装依赖
+npm start           # 运行应用
+npm test            # 运行测试
+npm run dist:win    # 打包 Windows（另有 dist:mac / dist:linux）
+```
+
+安装包输出到 `dist/`。
+
 ## 💬 反馈
 
 遇到问题或有新想法？欢迎提交 [Issue](https://github.com/gu-success/donedesk/issues/new/choose)。觉得好用就点个 ⭐ Star 吧！
+
+## 📄 许可证
+
+[MIT](LICENSE) © 2026 gu-success

@@ -1,0 +1,48 @@
+name: macOS build
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+jobs:
+  mac:
+    runs-on: macos-latest
+    timeout-minutes: 45
+    env:
+      CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: npm ci
+      - run: npm test
+      - name: Build (unsigned, no publish)
+        run: npx electron-builder --mac --x64 --arm64 --publish never
+      - name: List artifacts
+        run: ls -la dist
+      - name: Smoke test (launch built app ~15s, self-check, screenshot)
+        run: |
+          set -x
+          mkdir -p smoke
+          ARCH=$(uname -m)
+          if [ "$ARCH" = "arm64" ]; then APP="dist/mac-arm64/DoneDesk.app"; else APP="dist/mac/DoneDesk.app"; fi
+          ls "$APP/Contents/MacOS"
+          export TN_SMOKE="$PWD/smoke" TN_SMOKE_HOLD=12000 TN_DATA="$PWD/smoke/data"
+          "$APP/Contents/MacOS/DoneDesk" > smoke/app.log 2>&1 &
+          PID=$!
+          sleep 8
+          screencapture -x smoke/screen.png || echo "screencapture failed"
+          if kill -0 $PID 2>/dev/null; then echo "ALIVE after 8s"; else echo "DIED early"; fi
+          wait $PID; CODE=$?
+          echo "exit code $CODE" | tee smoke/exit.txt
+          cat smoke/app.log | tail -30
+          cat smoke/smoke.json
+          test "$CODE" = "0"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: smoke, path: smoke/ }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mac-dist
+          path: |
+            dist/*.dmg
+            dist/*.zip

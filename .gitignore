@@ -1,0 +1,17 @@
+node_modules/
+dist/
+screenshots/
+*.diff
+*.log
+.DS_Store
+smoke/
+out/
+coverage/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.cer
+*.mobileprovision
+.npmrc

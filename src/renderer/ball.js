@@ -1,0 +1,11 @@
+'use strict';
+const b = document.getElementById('ball'), badge = document.getElementById('badge');
+const mq = matchMedia('(prefers-color-scheme: dark)'); let theme = 'system';
+const applyTheme = () => document.documentElement.classList.toggle('dark', theme === 'dark' || (theme !== 'light' && mq.matches));
+mq.addEventListener('change', applyTheme);
+window.api.on('ball:update', (v) => { theme = v.theme || 'system'; applyTheme(); badge.hidden = !v.left; badge.textContent = v.left > 99 ? '99+' : String(v.left); b.title = v.title; });
+let down = null, moved = false;
+b.addEventListener('pointerdown', (e) => { if (e.button !== 0) return; b.setPointerCapture(e.pointerId); down = { x: e.screenX, y: e.screenY }; moved = false; window.api.ball('ball:drag', 'start'); });
+b.addEventListener('pointermove', (e) => { if (!down) return; if (!moved && Math.hypot(e.screenX - down.x, e.screenY - down.y) > 4) { moved = true; b.classList.add('drag'); } if (moved) window.api.ball('ball:drag', 'move'); });
+b.addEventListener('pointerup', () => { if (!down) return; down = null; b.classList.remove('drag'); if (moved) window.api.ball('ball:drag', 'end'); else window.api.ball('ball:click'); });
+b.addEventListener('contextmenu', (e) => { e.preventDefault(); window.api.ball('ball:menu'); });

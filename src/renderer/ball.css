@@ -1,0 +1,7 @@
+:root{--ring:#FFFFFF;--edge:rgba(40,30,10,.10);--sh:rgba(40,30,10,.28)}
+:root.dark{--ring:#2A2C32;--edge:rgba(255,255,255,.10);--sh:rgba(0,0,0,.55)}
+html,body{margin:0;width:100%;height:100%;background:transparent;overflow:hidden;user-select:none}
+#ball{position:absolute;inset:6px;border-radius:50%;background:var(--ring);box-shadow:0 0 0 1px var(--edge),0 4px 12px var(--sh);display:grid;place-items:center;cursor:grab;transition:transform 140ms ease}
+#ball:hover{transform:scale(1.06)}#ball.drag{cursor:grabbing;transform:scale(.96)}
+.core{width:44px;height:44px;display:block;pointer-events:none;filter:drop-shadow(0 1px 2px rgba(0,0,0,.18))}
+#badge{position:absolute;top:-2px;right:-3px;min-width:18px;height:18px;padding:0 5px;box-sizing:border-box;border-radius:9px;background:#E5484D;color:#fff;font:700 11px/18px system-ui,sans-serif;text-align:center;box-shadow:0 0 0 2px var(--ring)}

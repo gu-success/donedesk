@@ -1,0 +1,167 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:">
+<meta name="color-scheme" content="light dark">
+<title>DoneDesk</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="app" id="app">
+<header class="titlebar">
+  <div class="brand"><img class="logo" src="logo.png" alt="">DoneDesk</div>
+  <div class="wc">
+    <button id="wSet" class="wbtn" data-i18n-title="win.settings"></button>
+    <button id="wPin" class="wbtn" data-i18n-title="win.pin"></button>
+    <button id="wMin" class="wbtn" data-i18n-title="win.min"></button>
+    <button id="wClose" class="wbtn close" data-i18n-title="win.close"></button>
+  </div>
+</header>
+<nav class="seg"><button data-tab="tasks" class="tab on" data-i18n="tab.tasks"></button><button data-tab="recurring" class="tab" data-i18n="tab.recur"></button><button data-tab="notes" class="tab" data-i18n="tab.notes"></button><button data-tab="history" class="tab" data-i18n="tab.history"></button><span class="seg-thumb"></span></nav>
+<div id="notice" hidden></div>
+
+<section id="tasks" class="pane on">
+  <div class="phead"><div><div class="ptitle" id="todayTitle" data-i18n="today"></div><div class="psub" id="today"></div></div><div class="ring" id="ring"></div></div>
+  <div class="scroll">
+    <ul id="list"></ul>
+    <div class="empty" id="empty"><div class="empty-ic" id="emptyIc"></div><div class="empty-t" data-i18n="empty.t"></div><div class="empty-s" data-i18n="empty.s"></div></div>
+  </div>
+  <div class="addwrap" id="addWrap">
+    <button type="button" id="addFab" class="addfab" data-i18n-title="add.expand" data-ic="plus" hidden></button>
+    <form id="addForm" class="addbar">
+      <button type="button" id="recurBtn" class="plusbtn" data-i18n-title="add.recur" data-ic="plus"></button>
+      <div class="addmid">
+        <input id="newText" data-i18n-ph="add.ph" maxlength="500" autocomplete="off">
+        <span id="recurChip" class="rchip" hidden><span id="recurChipT"></span><button type="button" id="recurChipX" class="rchip-x" data-i18n-title="add.clearChip" data-ic="close"></button></span>
+      </div>
+      <label class="star-toggle" data-i18n-title="add.urgent"><input type="checkbox" id="newUrgent"><span data-ic="star"></span></label>
+      <button class="send" data-i18n-title="add" data-ic="up"></button>
+    </form>
+  </div>
+</section>
+
+<section id="recurring" class="pane">
+  <div class="phead"><div><div class="ptitle" data-i18n="rc.title"></div><div class="psub" id="rcSub"></div></div></div>
+  <div class="scroll">
+    <ul id="recurList"></ul>
+    <div class="empty" id="rcEmpty" hidden><div class="empty-ic" data-ic="repeat"></div><div class="empty-t" data-i18n="rc.empty"></div><div class="empty-s" data-i18n="rc.emptyS"></div></div>
+  </div>
+  <div class="addwrap collapsed"><button type="button" id="rcAdd" class="addfab" data-i18n-title="rp.new" data-ic="plus"></button></div>
+</section>
+
+<section id="notes" class="pane">
+  <div id="vSetup" class="center" hidden>
+    <div class="lock-ic" data-ic="shield"></div>
+    <h3 data-i18n="v.setup"></h3>
+    <p class="muted c" data-i18n="v.setupSub"></p>
+    <div class="warn"><span data-ic="alert"></span><span data-i18n="v.warn"></span></div>
+    <input type="password" id="sp1" class="field" data-i18n-ph="v.pw1"><input type="password" id="sp2" class="field" data-i18n-ph="v.pw2">
+    <button id="spBtn" class="btn primary" data-i18n="v.create"></button><div class="err" id="spErr"></div>
+  </div>
+  <div id="vLock" class="center" hidden>
+    <div class="lock-ic" data-ic="lock"></div>
+    <h3 data-i18n="v.locked"></h3>
+    <p class="muted c" data-i18n="v.lockedSub"></p>
+    <div class="pw"><input type="password" id="up" class="field" data-i18n-ph="v.pw"><button id="upBtn" class="btn primary" data-i18n="v.unlock"></button></div>
+    <div class="err" id="upErr"></div>
+    <p class="hint c" data-i18n="v.forget"></p>
+  </div>
+  <div id="vOpen" hidden>
+    <div id="nListView">
+      <div class="phead"><div><div class="ptitle" data-i18n="n.title"></div><div class="psub" id="nCount"></div></div>
+        <div class="row"><button id="nNew" class="icbtn" data-i18n-title="n.new" data-ic="plus"></button><button id="nLock" class="icbtn" data-i18n-title="n.lock" data-ic="lock"></button></div></div>
+      <ul id="noteList" class="scroll"></ul>
+    </div>
+    <div id="nEditView" hidden>
+      <div class="ebar"><button id="nBack" class="icbtn" data-i18n-title="n.back" data-ic="back"></button><span class="hint" id="nStatus"></span><button id="nDel" class="icbtn danger" data-i18n-title="n.del" data-ic="trash"></button></div>
+      <input id="nTitle" class="ntitle" data-i18n-ph="n.titlePh" maxlength="200">
+      <textarea id="nBody" data-i18n-ph="n.bodyPh"></textarea>
+    </div>
+  </div>
+</section>
+
+<section id="history" class="pane">
+  <div class="phead"><div><div class="ptitle" data-i18n="h.title"></div><div class="psub" id="hSub"></div></div></div>
+  <div class="hbar">
+    <div class="hsearch"><span data-ic="search"></span><input id="hQ" data-i18n-ph="h.search" autocomplete="off"></div>
+    <div class="hnav"><button id="hPrev" class="icbtn" data-i18n-title="h.prev" data-ic="back"></button>
+      <input type="date" id="hDate" class="field sm"><button id="hNext" class="icbtn" data-i18n-title="h.next" data-ic="chev"></button>
+      <button id="hAll" class="chipbtn" data-i18n="h.all"></button></div>
+  </div>
+  <div class="scroll" id="hScroll">
+    <div id="hList"></div>
+    <div class="empty" id="hEmpty" hidden><div class="empty-ic" data-ic="clock"></div><div class="empty-t" id="hEmptyT"></div><div class="empty-s" id="hEmptyS"></div></div>
+    <button id="hMore" class="btn ghost" hidden></button>
+  </div>
+</section>
+
+<div id="recurPop" class="rpop" tabindex="-1" hidden role="dialog" aria-modal="true">
+  <div class="rpop-h" id="rpTitle"></div>
+  <div class="rp-text" id="rpTextRow"><input id="rText" class="field" maxlength="500" autocomplete="off" data-i18n-ph="rp.text"><label class="star-toggle" data-i18n-title="rp.urgent"><input type="checkbox" id="rUrgent"><span data-ic="star"></span></label></div>
+  <div class="rseg" id="rFreq" role="radiogroup">
+    <button type="button" data-f="none" data-i18n="rp.once"></button><button type="button" data-f="daily" data-i18n="daily"></button><button type="button" data-f="weekly" data-i18n="weekly"></button><button type="button" data-f="monthly" data-i18n="monthly"></button>
+  </div>
+  <div class="rp-row" id="rWeekRow"><span class="rp-l" data-i18n="rp.week"></span><div class="wk" id="rWeek"></div></div>
+  <div class="rp-row" id="rMonthRow"><span class="rp-l" data-i18n="rp.day"></span><select id="rDay" class="field sm"></select></div>
+  <div class="rp-row" id="rTimeRow"><span class="rp-l" data-i18n="rp.time"></span><input type="time" id="rTime" class="field sm" value="09:00"></div>
+  <div class="rp-act"><button type="button" id="rCancel" class="btn sm subtle" data-i18n="rp.cancel"></button><button type="button" id="rOk" class="btn primary sm" data-i18n="rp.ok"></button></div>
+</div>
+<div id="dlg" class="modal center-m" hidden><div class="dlg" role="alertdialog"><p id="dlgMsg"></p><div class="rp-act"><button type="button" id="dlgNo" class="btn sm subtle" data-i18n="dlg.cancel"></button><button type="button" id="dlgYes" class="btn sm danger-b" data-i18n="dlg.ok"></button></div></div></div>
+<div id="cele" hidden aria-live="polite"><div class="cele-card"><div class="cele-ck"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="23"/><path d="M15 27l7 7 15-16"/></svg></div><div class="cele-t" data-i18n="cele.t"></div><div class="cele-s" data-i18n="cele.s"></div></div></div>
+<div id="settings" class="modal" hidden>
+ <div class="sheet" role="dialog" aria-modal="true">
+  <div class="shead"><span class="stitle" data-i18n="s.title"></span><button id="sClose" class="icbtn" data-i18n-title="s.close" data-ic="close"></button></div>
+  <div class="scroll">
+  <div class="glabel" data-i18n="s.appearance"></div>
+  <div class="group">
+    <div class="item"><span data-i18n="s.theme"></span>
+      <div class="theme-seg" id="sTheme" role="radiogroup">
+        <button type="button" data-theme="light" class="theme-opt" data-i18n="s.light"></button>
+        <button type="button" data-theme="dark" class="theme-opt" data-i18n="s.dark"></button>
+        <button type="button" data-theme="system" class="theme-opt on" data-i18n="s.system"></button>
+      </div>
+    </div>
+    <div class="item"><span data-i18n="s.lang"></span>
+      <div class="theme-seg" id="sLang">
+        <button type="button" data-lang="zh" class="theme-opt">中文</button>
+        <button type="button" data-lang="en" class="theme-opt">English</button>
+        <button type="button" data-lang="system" class="theme-opt" data-i18n="s.system"></button>
+      </div>
+    </div>
+    <div class="item col"><div class="orow"><span data-i18n="s.opacity"></span><span class="kbd" id="sOpVal">100%</span></div>
+      <input type="range" id="sOpacity" class="range" min="30" max="100" step="5" value="100"></div>
+    <div class="item"><span data-i18n="s.font"></span>
+      <select id="sFont" class="field sm font-sel">
+        <option value="system" data-i18n="s.font.system"></option>
+        <option value="segoe" data-i18n="s.font.segoe"></option>
+        <option value="yahei" data-i18n="s.font.yahei"></option>
+        <option value="pingfang" data-i18n="s.font.pingfang"></option>
+        <option value="noto" data-i18n="s.font.noto"></option>
+        <option value="inter" data-i18n="s.font.inter"></option>
+        <option value="consolas" data-i18n="s.font.consolas"></option>
+      </select>
+    </div>
+  </div>
+  <div class="glabel" data-i18n="s.window"></div>
+  <div class="group">
+    <label class="item"><span data-i18n="s.top"></span><input type="checkbox" id="sTop" class="switch"></label>
+    <label class="item"><span><span data-i18n="s.auto"></span><small id="sAutoHint" data-i18n="s.autoHint"></small></span><input type="checkbox" id="sAuto" class="switch"></label>
+    <label class="item"><span><span data-i18n="s.bubble"></span><small data-i18n="s.bubbleHint"></small></span><input type="checkbox" id="sBub" class="switch"></label>
+    <label class="item"><span data-i18n="s.bubbleSec"></span><select id="sBubSec" class="field sm"><option value="3"></option><option value="4"></option><option value="6"></option><option value="10"></option></select></label>
+    <label class="item"><span><span data-i18n="s.cele"></span><small data-i18n="s.celeHint"></small></span><input type="checkbox" id="sCele" class="switch"></label>
+    <div class="item"><span data-i18n="s.hotkey"></span><span id="sHotkey" class="kbd"></span></div>
+  </div>
+  <div class="glabel" data-i18n="s.security"></div>
+  <div class="group">
+    <label class="item"><span data-i18n="s.relock"></span><select id="sRelock" class="field sm"><option value="1"></option><option value="5"></option><option value="15"></option><option value="30"></option><option value="60"></option><option value="0" data-i18n="s.never"></option></select></label>
+    <details class="item col"><summary><span data-i18n="s.cpw"></span><span class="chev" data-ic="chev"></span></summary>
+      <div class="cpw"><p class="hint" data-i18n="s.cpwNeedVault" style="margin:0 0 6px;text-align:left"></p>
+        <input type="password" id="cp0" class="field" data-i18n-ph="s.cur" autocomplete="current-password">
+        <input type="password" id="cp1" class="field" data-i18n-ph="s.newpw" autocomplete="new-password">
+        <input type="password" id="cp2" class="field" data-i18n-ph="s.newpw2" autocomplete="new-password">
+        <button id="cpBtn" class="btn primary" data-i18n="s.cpwBtn"></button><div class="err" id="cpErr"></div></div>
+    </details>
+  </div>
+  <p class="foot" data-i18n="s.foot"></p>
+  </div>
+ </div>
+</div>
+</div>
+<div class="rz n" data-e="n"></div><div class="rz s" data-e="s"></div><div class="rz e" data-e="e"></div><div class="rz w" data-e="w"></div>
+<div class="rz ne" data-e="ne"></div><div class="rz nw" data-e="nw"></div><div class="rz se" data-e="se"></div><div class="rz sw" data-e="sw"></div>
+<script src="i18n.js"></script><script src="app.js"></script></body></html>

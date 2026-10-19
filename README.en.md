@@ -6,6 +6,7 @@
   <a href="https://github.com/gu-success/donedesk/releases"><img src="https://img.shields.io/github/downloads/gu-success/donedesk/total?style=flat-square&color=2ea44f" alt="downloads"></a>
   <img src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-555?style=flat-square" alt="platform">
   <img src="https://img.shields.io/badge/Electron-desktop-47848F?style=flat-square&logo=electron&logoColor=white" alt="electron">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="license MIT"></a>
   <p><a href="README.md">中文</a> | <b>English</b></p>
   <p><a href="https://github.com/gu-success/donedesk/releases/latest"><b>⬇️ Download the latest release</b></a></p>
   <img src="docs/images/hero.png" width="760" alt="DoneDesk light and dark themes">
@@ -89,6 +90,23 @@ Copy the data folder listed under Privacy & Security.
 - [ ] Auto-update
 - [ ] Code signing / Apple notarization
 
+## 🛠️ Build from source
+
+Requires Node.js 20+.
+
+```bash
+npm ci              # install dependencies
+npm start           # run the app
+npm test            # run tests
+npm run dist:win    # package for Windows (also dist:mac / dist:linux)
+```
+
+Packages are written to `dist/`.
+
 ## 💬 Feedback
 
 Found a bug or have an idea? Open an [Issue](https://github.com/gu-success/donedesk/issues/new/choose). If you like it, a ⭐ Star is appreciated!
+
+## 📄 License
+
+[MIT](LICENSE) © 2026 gu-success

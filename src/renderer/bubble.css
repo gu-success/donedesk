@@ -1,0 +1,24 @@
+:root{--bg:#FFFFFF;--text:#22252B;--muted:#8A8E98;--edge:rgba(40,30,10,.10);--sh:rgba(40,30,10,.22);--red:#E5484D}
+:root.dark{--bg:#2A2C32;--text:#E8E9EC;--muted:#8F939C;--edge:rgba(255,255,255,.10);--sh:rgba(0,0,0,.5);--red:#FF6B6F}
+html,body{margin:0;width:100%;height:100%;background:transparent;overflow:hidden;user-select:none;font:13px/1.35 "Microsoft YaHei UI","PingFang SC",system-ui,"Noto Sans CJK SC",sans-serif}
+body{display:flex;box-sizing:border-box;padding:6px 12px}
+body.right{justify-content:flex-start}body.left{justify-content:flex-end}
+body.top{align-items:flex-end}body.bottom{align-items:flex-start}
+#bub{position:relative;max-width:220px;min-width:60px;padding:8px 12px;border-radius:14px;background:var(--bg);color:var(--text);box-shadow:0 0 0 1px var(--edge),0 4px 12px var(--sh);cursor:pointer;display:flex;align-items:center;gap:8px;box-sizing:border-box}
+body.right.top #bub{transform-origin:0 100%}body.left.top #bub{transform-origin:100% 100%}
+body.right.bottom #bub{transform-origin:0 0}body.left.bottom #bub{transform-origin:100% 0}
+/* 尾巴：较大的三角，指向球体侧面（徽标下方） */
+#bub::before{content:"";position:absolute;width:13px;height:13px;background:var(--bg);filter:drop-shadow(0 1px 1px var(--sh))}
+body.right.top #bub::before{left:-10px;bottom:5px;clip-path:polygon(100% 0,100% 100%,0 100%)}
+body.left.top #bub::before{right:-10px;bottom:5px;clip-path:polygon(0 0,0 100%,100% 100%)}
+body.right.bottom #bub::before{left:-10px;top:5px;clip-path:polygon(0 0,100% 0,100% 100%)}
+body.left.bottom #bub::before{right:-10px;top:5px;clip-path:polygon(0 0,100% 0,0 100%)}
+#msg{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#msg.urgent{color:var(--red);font-weight:600}#msg .star{margin-right:3px}
+#msg.done{color:var(--muted)}
+#idx{flex:none;font-size:10.5px;color:var(--muted)}
+.in{animation:in 320ms cubic-bezier(.2,.8,.3,1)}.out{animation:out 220ms ease forwards}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes out{to{opacity:0;transform:translateY(-8px)}}
+#bub.pop{animation:pop 260ms cubic-bezier(.3,1.4,.5,1)}
+@keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
