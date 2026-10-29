@@ -36,10 +36,10 @@
 
 | 平台 | 安装包 |
 |---|---|
-| Windows 10/11 (x64) | [DoneDesk-Setup-1.1.6.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-Setup-1.1.6.exe) |
-| macOS · Apple 芯片 (M1–M4) | [DoneDesk-1.1.6-mac-arm64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-1.1.6-mac-arm64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-1.1.6-mac-arm64.zip) |
-| macOS · Intel | [DoneDesk-1.1.6-mac-x64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-1.1.6-mac-x64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-1.1.6-mac-x64.zip) |
-| Linux · Debian/Ubuntu (x64) | [donedesk_1.1.6_amd64.deb](https://github.com/gu-success/donedesk/releases/download/v1.1.6/donedesk_1.1.6_amd64.deb) |
+| Windows 10/11 (x64) | [DoneDesk-Setup-1.1.7.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.7/DoneDesk-Setup-1.1.7.exe) |
+| macOS · Apple 芯片 (M1–M4) | [DoneDesk-1.1.7-mac-arm64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.7/DoneDesk-1.1.7-mac-arm64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.7/DoneDesk-1.1.7-mac-arm64.zip) |
+| macOS · Intel | [DoneDesk-1.1.7-mac-x64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.7/DoneDesk-1.1.7-mac-x64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.7/DoneDesk-1.1.7-mac-x64.zip) |
+| Linux · Debian/Ubuntu (x64) | [donedesk_1.1.7_amd64.deb](https://github.com/gu-success/donedesk/releases/download/v1.1.7/donedesk_1.1.7_amd64.deb) |
 
 不确定 Mac 芯片？点左上角  →「关于本机」查看。
 
