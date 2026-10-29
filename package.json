@@ -1,19 +1,12 @@
 {
   "name": "donedesk",
   "productName": "DoneDesk",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "DoneDesk - daily tasks & encrypted notepad",
   "author": "Success <success@example.com>",
+  "homepage": "https://github.com/gu-success/donedesk#readme",
   "main": "src/main.js",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gu-success/donedesk.git"
-  },
-  "homepage": "https://github.com/gu-success/donedesk#readme",
-  "bugs": {
-    "url": "https://github.com/gu-success/donedesk/issues"
-  },
   "scripts": {
     "start": "electron .",
     "test": "node --test test/",
@@ -94,5 +87,12 @@
   "devDependencies": {
     "electron": "^33.4.11",
     "electron-builder": "^25.1.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gu-success/donedesk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gu-success/donedesk/issues"
   }
 }

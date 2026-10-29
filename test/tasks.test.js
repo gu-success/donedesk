@@ -34,3 +34,34 @@ test('紧急置顶与组内重排', () => {
   T.deleteTask(s, e.id); assert.deepEqual(T.sorted(s.tasks).map((t) => t.order), [0, 1, 2]);
   assert.throws(() => T.addTask(s, '   ', d));
 });
+
+test('整表序：未完成(周期→继承→紧急→每日) → 已完成垫底；勾选完成掉入底部', () => {
+  const s = T.emptyState(); const d = '2026-10-20';
+  const daily = T.addTask(s, 'daily', d);
+  const urg = T.addTask(s, 'urgent', d, true);
+  const carried = T.addTask(s, 'carried', d); carried.carriedFrom = '2026-10-19';
+  const recur = T.addTask(s, 'recur', d); recur.recurId = 'r1';
+    T.updateTask(s, daily.id, { text: 'daily' });
+  assert.deepEqual(T.sorted(s.tasks).map((t) => t.text), ['recur', 'carried', 'urgent', 'daily']);
+  T.updateTask(s, urg.id, { done: true });
+  assert.deepEqual(T.sorted(s.tasks).map((t) => t.text), ['recur', 'carried', 'daily', 'urgent']);
+  assert.ok(s.tasks.find((t) => t.id === urg.id).done);
+  T.updateTask(s, recur.id, { done: true });
+  assert.deepEqual(T.sorted(s.tasks).map((t) => t.text), ['carried', 'daily', 'recur', 'urgent']);
+  // 紧急未完成不得压到已完成上面
+  const urg2 = T.addTask(s, 'urgent2', d, true);
+  assert.deepEqual(T.sorted(s.tasks).map((t) => t.text), ['carried', 'urgent2', 'daily', 'recur', 'urgent']);
+});
+test('周期/继承优先于 urgent 标记；已完成区内同类相对序保留', () => {
+  const s = T.emptyState(); const d = '2026-10-21';
+  const r = T.addTask(s, 'R', d, true); r.recurId = 'rx';
+  const c = T.addTask(s, 'C', d, true); c.carriedFrom = '2026-10-20';
+  const u = T.addTask(s, 'U', d, true);
+  T.updateTask(s, u.id, { text: 'U' });
+  assert.deepEqual(T.sorted(s.tasks).map((t) => t.text), ['R', 'C', 'U']);
+  T.updateTask(s, r.id, { done: true });
+  T.updateTask(s, c.id, { done: true });
+  T.updateTask(s, u.id, { done: true });
+  // 全完成：仍按 kind，已完成整块在未完成之后（此处无未完成）
+  assert.deepEqual(T.sorted(s.tasks).map((t) => t.text), ['R', 'C', 'U']);
+});

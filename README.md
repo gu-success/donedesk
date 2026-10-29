@@ -19,7 +19,7 @@
 - 🗓️ **周期任务** —— 每天 / 每周 / 每月重复，可设定时提醒；独立「周期」页统一编辑、暂停。
 - 🟡 **悬浮球 + 任务气泡** —— 最小化后悬浮球显示未完成数量，气泡轮播待办。
 - 🔒 **加密记事本** —— 密码保护，AES-256-GCM 本地加密，闲置自动锁定。
-- 🕘 **历史记录** —— 按日期回顾过去的任务，支持搜索与一键恢复。
+- 🕘 **历史记录** —— 选日期后查看当天完成情况，支持搜索与一键恢复。
 - 🎨 **个性化** —— 浅色/深色主题、窗口透明度、界面字体、中英双语切换。
 
 ## 📸 截图
@@ -36,10 +36,10 @@
 
 | 平台 | 安装包 |
 |---|---|
-| Windows 10/11 (x64) | [DoneDesk-Setup-1.1.5.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-Setup-1.1.5.exe) |
-| macOS · Apple 芯片 (M1–M4) | [DoneDesk-1.1.5-mac-arm64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-arm64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-arm64.zip) |
-| macOS · Intel | [DoneDesk-1.1.5-mac-x64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-x64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-x64.zip) |
-| Linux · Debian/Ubuntu (x64) | [donedesk_1.1.5_amd64.deb](https://github.com/gu-success/donedesk/releases/download/v1.1.5/donedesk_1.1.5_amd64.deb) |
+| Windows 10/11 (x64) | [DoneDesk-Setup-1.1.6.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-Setup-1.1.6.exe) |
+| macOS · Apple 芯片 (M1–M4) | [DoneDesk-1.1.6-mac-arm64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-1.1.6-mac-arm64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-1.1.6-mac-arm64.zip) |
+| macOS · Intel | [DoneDesk-1.1.6-mac-x64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-1.1.6-mac-x64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-1.1.6-mac-x64.zip) |
+| Linux · Debian/Ubuntu (x64) | [donedesk_1.1.6_amd64.deb](https://github.com/gu-success/donedesk/releases/download/v1.1.6/donedesk_1.1.6_amd64.deb) |
 
 不确定 Mac 芯片？点左上角  →「关于本机」查看。
 
