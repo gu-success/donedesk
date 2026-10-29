@@ -19,7 +19,7 @@
 - 🗓️ **Recurring tasks** — daily / weekly / monthly with reminders, managed (edit / pause) in their own tab.
 - 🟡 **Floating ball + task bubble** — when minimized, a ball shows your open-task count and a bubble cycles through them.
 - 🔒 **Encrypted notes** — password-protected, AES-256-GCM, local-only, auto-lock on idle.
-- 🕘 **History** — browse past days, search, and restore any task to today.
+- 🕘 **History** — Pick a date to see that day’s tasks; search and restore supported.
 - 🎨 **Make it yours** — light/dark themes, window opacity, UI fonts, English / Chinese.
 
 ## 📸 Screenshots
@@ -36,10 +36,10 @@ Grab the package for your platform from [Releases](https://github.com/gu-success
 
 | Platform | Package |
 |---|---|
-| Windows 10/11 (x64) | [DoneDesk-Setup-1.1.5.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-Setup-1.1.5.exe) |
-| macOS · Apple Silicon (M1–M4) | [DoneDesk-1.1.5-mac-arm64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-arm64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-arm64.zip) |
-| macOS · Intel | [DoneDesk-1.1.5-mac-x64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-x64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.5/DoneDesk-1.1.5-mac-x64.zip) |
-| Linux · Debian/Ubuntu (x64) | [donedesk_1.1.5_amd64.deb](https://github.com/gu-success/donedesk/releases/download/v1.1.5/donedesk_1.1.5_amd64.deb) |
+| Windows 10/11 (x64) | [DoneDesk-Setup-1.1.6.exe](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-Setup-1.1.6.exe) |
+| macOS · Apple Silicon (M1–M4) | [DoneDesk-1.1.6-mac-arm64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-1.1.6-mac-arm64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-1.1.6-mac-arm64.zip) |
+| macOS · Intel | [DoneDesk-1.1.6-mac-x64.dmg](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-1.1.6-mac-x64.dmg) · [zip](https://github.com/gu-success/donedesk/releases/download/v1.1.6/DoneDesk-1.1.6-mac-x64.zip) |
+| Linux · Debian/Ubuntu (x64) | [donedesk_1.1.6_amd64.deb](https://github.com/gu-success/donedesk/releases/download/v1.1.6/donedesk_1.1.6_amd64.deb) |
 
 Not sure which Mac you have? Apple menu  → About This Mac.
 

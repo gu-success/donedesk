@@ -72,7 +72,7 @@ function showTab(t) {
   document.querySelectorAll('.pane').forEach((p) => p.classList.toggle('on', p.id === t));
   document.querySelector('.seg-thumb').style.transform = `translateX(${TABS.indexOf(t) * 100}%)`;
   if (t === 'notes') refreshVault();
-  if (t === 'history') loadHistory(true);
+  if (t === 'history') { H.date = ''; H.q = ''; if ($('hQ')) $('hQ').value = ''; loadHistory(true); }
   if (!$('recurPop').hidden) closePop();
 }
 
@@ -352,10 +352,29 @@ const md = (d) => d ? d.slice(5).replace('-', '/') : '';
 async function loadHistory(reset) {
   if (reset) H.offset = 0;
   const seq = ++H.seq;
-  const r = await run(API.call('history:query', { q: H.q, date: H.date, offset: H.offset, limit: 100 }));
-  if (seq !== H.seq) return; // 丢弃过期结果
-  H.dates = r.dates; H.next = r.next;
-  const box = $('hList'); if (reset) box.replaceChildren();
+  // 无日期：只取 dates 供导航，不渲染任务列表（一次一天，先选日期）
+  const opts = H.date
+    ? { q: H.q, date: H.date, offset: H.offset, limit: 100 }
+    : { q: '', date: '\0', offset: 0, limit: 1 };
+  const r = await run(API.call('history:query', opts));
+  if (seq !== H.seq) return;
+  H.dates = r.dates; H.next = H.date ? r.next : null;
+  const box = $('hList');
+  if (!H.date) {
+    box.replaceChildren();
+    $('hMore').hidden = true;
+    const any = r.dates.length > 0;
+    $('hEmpty').hidden = false;
+    $('hEmptyT').textContent = any ? t('h.pick') : t('h.empty');
+    $('hEmptyS').textContent = any ? t('h.pickS') : t('h.emptyS');
+    $('hSub').textContent = any ? t('h.pickSub', { n: r.dates.length }) : t('h.count', { n: 0 });
+    $('hDate').value = '';
+    $('hAll').hidden = true;
+    $('hPrev').disabled = !r.dates.length;
+    $('hNext').disabled = true;
+    return;
+  }
+  if (reset) box.replaceChildren();
   for (const d of r.days) {
     let sec = box.lastElementChild?.dataset.date === d.date ? box.lastElementChild : null;
     if (!sec) { sec = el('div', { className: 'hday' }); sec.dataset.date = d.date; sec.append(el('div', { className: 'hdate' }, el('span', { textContent: fmtDay(d.date) }), el('span', { className: 'hstat' })), el('ul', { className: 'hitems' })); box.append(sec); }
@@ -375,18 +394,19 @@ async function loadHistory(reset) {
   H.offset = r.next ?? H.offset;
   $('hMore').hidden = r.next == null; if (r.next != null) $('hMore').textContent = t('h.more', { n: r.total - r.next });
   const none = !box.children.length; $('hEmpty').hidden = !none;
-  if (none) { const any = r.dates.length > 0; $('hEmptyT').textContent = any ? t('h.none') : t('h.empty'); $('hEmptyS').textContent = any ? '' : t('h.emptyS'); }
+  if (none) { $('hEmptyT').textContent = t('h.none'); $('hEmptyS').textContent = ''; }
   $('hSub').textContent = t('h.count', { n: r.total });
   $('hDate').value = H.date; $('hAll').hidden = !H.date;
   const i = H.dates.indexOf(H.date);
-  $('hPrev').disabled = !H.dates.length || (H.date && i >= H.dates.length - 1); $('hNext').disabled = !H.date;
+  $('hPrev').disabled = !H.dates.length || (H.date && i >= H.dates.length - 1); $('hNext').disabled = !H.date || i <= 0;
 }
-let hqT; $('hQ').oninput = () => { clearTimeout(hqT); hqT = setTimeout(() => { H.q = $('hQ').value; loadHistory(true); }, 180); };
+let hqT; $('hQ').oninput = () => { clearTimeout(hqT); hqT = setTimeout(() => { H.q = $('hQ').value; if (!H.date) return; loadHistory(true); }, 180); };
 $('hDate').onchange = () => { H.date = $('hDate').value; loadHistory(true); };
+// 清除日期 → 回到「先选日期」空态（不再展示全部日期列表）
 $('hAll').onclick = () => { H.date = ''; loadHistory(true); };
-// 前一天/后一天：在有记录的日期间跳转（dates 为新->旧）
+// 前一天/后一天：在有记录的日期间跳转（dates 为新->旧）；无日期时 prev 选最近一天
 $('hPrev').onclick = () => { const d = H.dates; if (!d.length) return; const i = H.date ? d.findIndex((x) => x < H.date) : 0; if (i >= 0) { H.date = d[i]; loadHistory(true); } };
-$('hNext').onclick = () => { const d = H.dates; const later = d.filter((x) => x > H.date); H.date = later.length ? later[later.length - 1] : ''; loadHistory(true); };
+$('hNext').onclick = () => { const d = H.dates; if (!H.date) return; const later = d.filter((x) => x > H.date); if (!later.length) return; H.date = later[later.length - 1]; loadHistory(true); };
 $('hMore').onclick = () => loadHistory(false);
 
 // ---------- 记事本 ----------

@@ -68,8 +68,19 @@ function restoreFromHistory(state, hid, today) {
   return addTask(state, it.text, today, it.urgent);
 }
 
+// 整表序：未完成(周期→昨日继承→紧急→每日) → 已完成垫底。勾选完成即掉入已完成区。
+// 紧急用 urgent 字段；与周期/继承重叠时周期/继承优先（不单独抬到已完成之上）。
+function taskKind(t) {
+  if (t.recurId) return 0;
+  if (t.carriedFrom) return 1;
+  if (t.urgent) return 2;
+  return 3;
+}
 function sorted(tasks) {
-  return [...tasks].sort((a, b) => (Number(!!b.urgent) - Number(!!a.urgent)) || (a.order - b.order));
+  return [...tasks].sort((a, b) =>
+    (Number(!!a.done) - Number(!!b.done)) ||
+    (taskKind(a) - taskKind(b)) ||
+    (a.order - b.order));
 }
 
 function renumber(state) {
